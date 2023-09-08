@@ -19,12 +19,12 @@ const getContactById = async (req, res) => {
     res.json(result);
 };
 
-const addContact = async (req, res) => {
+const addContact = async (req, res, _) => {
     const result = await contacts.addContact(req.body);
     res.status(201).json(result);
 };
 
-const removeContact = async (req, res) => {
+const removeContact = async (req, res, _) => {
 
     const { contactId } = req.params;
     const result = await contacts.removeContact(contactId);
@@ -32,7 +32,7 @@ const removeContact = async (req, res) => {
         throw HttpError(404, 'Not found');
     }
     res.json({
-        message: 'Contact deleted'
+        message: 'contact deleted'
     })
 }
 
