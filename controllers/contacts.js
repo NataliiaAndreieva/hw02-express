@@ -3,7 +3,6 @@ const contacts = require('../models/contacts');
 const HttpError = require('../helpers/HttpError');
 const ctrlWrapper = require('../helpers/ctrlWrapper')
 
-
 const listContacts = async (_, res) => {
   const result = await contacts.listContacts();
   res.json(result);
