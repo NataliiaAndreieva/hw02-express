@@ -1,11 +1,12 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const app = require("./app");
 
 // Ys4nNNPG03swLyRI;
 
-const DB_HOST = "mongodb+srv://Nataliia:Ys4nNNPG03swLyRI@cluster0.9ylfyca.mongodb.net/db-contacts?retryWrites=true&w=majority";
-
+const DB_HOST =
+  "mongodb+srv://Nataliia:Ys4nNNPG03swLyRI@cluster0.9ylfyca.mongodb.net/db-contacts?retryWrites=true&w=majority";
+  
 mongoose.set('strictQuery', true);
 
 mongoose.connect(DB_HOST)
