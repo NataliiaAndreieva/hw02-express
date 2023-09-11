@@ -12,4 +12,4 @@ const updateStatusContact = async (req, res) => {
   res.json(result);
 };
 
-module.exports = {updateStatusContact};
+module.exports = updateStatusContact;

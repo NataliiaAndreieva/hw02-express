@@ -12,4 +12,4 @@ const removeContact = async (req, res, _) => {
   });
 };
 
-module.exports = { removeContact};
+module.exports = removeContact;
