@@ -1,4 +1,4 @@
-const HttpError = require('../helpers/HttpError');
+const {HttpError} = require('../helpers');
 
 const validateBody = schema => {
     const func = (req, res, next) => {
@@ -10,7 +10,6 @@ const validateBody = schema => {
         if (error) {
             const missingField = error.details[0].context.key;
          next(HttpError(400, `missing required ${missingField} field`));
-            // next(HttpError(400, error.message));
         }
         next();
     }
