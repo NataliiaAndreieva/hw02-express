@@ -3,7 +3,9 @@ const {Contact} = require("../models/contact");
 
 const updateStatusContact = async (req, res) => {
   const { contactId } = req.params;
-  const result = await Contact.findByIdAndUpdate(contactId, req.body, {
+  const { favorite } = req.body;
+  
+  const result = await Contact.findByIdAndUpdate(contactId, favorite, {
     new: true,
   });
   if (!result) {
