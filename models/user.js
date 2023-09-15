@@ -40,7 +40,6 @@ const loginSchema = Joi.object({
 });
 
 const schemas = {
-  userSchema,
   registerSchema,
   loginSchema,
 };
