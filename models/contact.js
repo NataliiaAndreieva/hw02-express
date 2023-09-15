@@ -15,10 +15,10 @@ const contactSchema = new Schema({
     phone: {
         type: String,
     },
-    favorite: {
-        type: Boolean,
-        default: false,
-  },
+  favorite: {
+    type: Boolean,
+    default: false,
+   },
   owner: {
       type: Schema.Types.ObjectId,
       ref: "user",
@@ -40,7 +40,6 @@ const addSchema = Joi.object({
     .required()
     .messages({ "any.required": "missing required phone field", }),
   favorite: Joi.boolean(),
-
 });
 
 const updateFavoriteSchema = Joi.object({
