@@ -1,5 +1,5 @@
-const { HttpError } = require("../helpers");
-const {Contact} = require("../models/contact");
+const { HttpError } = require("../../helpers");
+const { Contact } = require("../../models/contact");
 
 const updateContact = async (req, res) => {
   const { contactId } = req.params;
@@ -12,4 +12,4 @@ const updateContact = async (req, res) => {
   res.json(result);
 };
 
-module.exports =  updateContact ;
+module.exports = updateContact;
