@@ -26,7 +26,11 @@ const userSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'user'
   },
-  token: String
+  token: String,
+  avatarURL: {
+    type: String,
+    required: true,
+  }
 }, { versionKey: false, timestamps: true });
 
 userSchema.post("save", handleMongooseError);
